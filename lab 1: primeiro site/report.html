@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Análise de Network no Chrome Developer Tools</title>
+</head>
+<body>
+    <h1>Relatório de Análise de Network no Chrome Developer Tools</h1>
+
+    <p>Ao utilizar a ferramenta <strong>Developer Tools</strong> do Chrome, é possível inspecionar os ficheiros que o navegador carrega ao visitar uma página. Aqui estão algumas observações feitas durante a análise de um simples recarregamento de página:</p>
+
+    <h2>O que aparece?</h2>
+    <p>Assim que a página é recarregada, a aba <strong>Network</strong> começa a mostrar todos os ficheiros que são baixados ou carregados para a página funcionar corretamente. Estes ficheiros incluem:</p>
+    <ul>
+        <li><strong>HTML</strong> - o ficheiro principal da página.</li>
+        <li><strong>CSS</strong> - ficheiros que definem o estilo e layout da página.</li>
+        <li><strong>JavaScript</strong> - scripts que controlam a interação e funcionalidade.</li>
+        <li><strong>Imagens</strong> - gráficos e ícones.</li>
+        <li>Outros ficheiros, como fontes ou ficheiros JSON para dados.</li>
+
+        <p>
+        <img src="/lab 1: primeiro site/images/Captura de ecrã 2024-09-20 112638.png">
+        </p>
+
+    </ul>
+
+    <h2>Tipos de Ficheiros e Timings</h2>
+    <p>A cada clique num hiperlink ou recarregamento de página, são descarregados múltiplos ficheiros, e cada um possui informações detalhadas sobre:</p>
+    <ul>
+        <li><strong>Tipo de ficheiro</strong> - HTML, CSS, JS, imagem, etc.</li>
+        <li><strong>Timings de espera e de descarga</strong> - Cada ficheiro tem uma linha que indica quanto tempo levou para começar a ser descarregado e o tempo total para completar o download.</li>
+    </ul>
+
+    <h2>Detalhes de Cada Ficheiro</h2>
+    <p>Ao clicar em cada ficheiro listado na aba <strong>Network</strong>, surgem diferentes separadores com mais informações:</p>
+    <ul>
+        <li><strong>Preview:</strong> Exibe uma pré-visualização do conteúdo do ficheiro, especialmente útil para JSON e HTML.</li>
+        <li><strong>Headers:</strong> Mostra os cabeçalhos HTTP, incluindo informações como tipo de conteúdo.</li>
+        <li><strong>Timing:</strong> Apresenta a linha de tempo detalhada de quando o ficheiro foi solicitado, recebido e processado pelo navegador.</li>
+    </ul>
+
+    <h2>Conclusão</h2>
+    <p>Usar o Chrome Developer Tools é uma maneira excelente de entender como os ficheiros são geridos pelo navegador e pode ser muito útil para depurar problemas de carregamento de recursos, identificar ficheiros pesados ou lentos, e otimizar o desempenho da página web.</p>
+
+    <h2>Mais descobertas</h2>
+    <ul>
+        <li>
+        <a href="/lab 1: primeiro site/report2.html" > Endereços IP</a> &#127760;</a>
+        </li>
+        <li>
+            <a href="/lab 1: primeiro site/report3.html" > DNS Checker</a> &#127760;</a>
+        </li>
+    </ul>
+</body>
+</html>
