@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz sobre Shibuya</title>
+</head>
+<body>
+    <header></header>
+        <h1>Shibuya</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informações</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+        <img src="/lab3/images/shibuya.jpg" alt="Shibuya" width="600">
+    </header>
+    <h1>Quizz sobre Shibuya</h1>
+    <form method="get" action="https://postman-echo.com/get">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira o seu nome" required autofocus maxlength="50"><br><br>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido" placeholder="Insira o seu apelido" required maxlength="50"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Insira o seu email" required autocomplete="off" size="30"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Quizz sobre Shibuya</legend>
+
+            <p>1. Se estivesse em Shibuya agora, qual seria a primeira coisa que farias?</p>
+            <input type="text" name="primeira_coisa" placeholder="Explorar, comer sushi, fazer compras..." required maxlength="100"><br><br>
+
+            <p>3. Já pensaste em visitar Shibuya?</p>
+            <input type="radio" id="sim_visitar" name="evento" value="Sim">
+            <label for="sim_visitar">Sim</label><br>
+            <input type="radio" id="nao_visitar" name="evento" value="Não">
+            <label for="nao_visitar">Não</label><br><br>
+
+            <p>4. Qual é o famoso anime que teve o cenário em Shibuya?</p>
+            <input list="animes_shibuya" id="anime" name="anime" placeholder="Selecione ou escreva" size="30">
+            <datalist id="animes_shibuya">
+                <option value="Jujutsu Kaisen">
+                <option value="Sailor Moon">
+                <option value="Dragon Ball">
+                <option value="Dororo">
+            </datalist><br><br>
+
+            <p>5. Qual é a população de Shibuya?</p>
+            <input type="number" name="populacao_shibuya" placeholder="Digite um número" step="1" required><br><br>
+
+            <p>6. O que é que achas que o Hachiko fazia enquanto esperava?</p>
+            <input type="radio" id="hachiko1" name="hachiko_acao" value="Dormir">
+            <label for="hachiko1">Dormia</label><br>
+            <input type="radio" id="hachiko2" name="hachiko_acao" value="Olhar para as pessoas">
+            <label for="hachiko2">Olhava para as pessoas</label><br>
+            <input type="radio" id="hachiko3" name="hachiko_acao" value="Brincar com outros cães">
+            <label for="hachiko3">Brincar com outros cães</label><br><br>
+
+            <p>7. O que é que imaginas fazer durante a noite em Shibuya?</p>
+            <input type="checkbox" id="compras_noite" name="atividades_noite" value="Compras">
+            <label for="compras_noite">Fazer compras</label><br>
+            <input type="checkbox" id="restaurante_noite" name="atividades_noite" value="Restaurantes">
+            <label for="restaurante_noite">Visitar restaurantes</label><br>
+            <input type="checkbox" id="festa_noite" name="atividades_noite" value="Festa">
+            <label for="festa_noite">Ir a uma festa</label><br><br>
+
+            <p>8. Escreva uma palavra para descrever como imaginas Shibuya:</p>
+            <textarea name="descricao" rows="3" cols="50" placeholder="Escreva uma palavra..." maxlength="200"></textarea><br><br>
+
+            <p>10. Qual emoji melhor representa a tua expectativa de Shibuya?<br>Pode usar o atalho /Win+"."</p>
+            <input type="text" name="emoji_shibuya" placeholder="Ex: 😍, 🤯, 😎" maxlength="3"><br><br>
+
+            <input type="reset" value="Limpar Formulário"><br><br>
+        </fieldset>
+
+        <input type="submit" value="Enviar Quizz">
+    </form>
+
+    <p><a href="/index.html">Voltar para o Website principal</a></p>
+    <footer>
+        <p>
+            Letizia Nunes<br>
+            Universidade Lusófona Lisboa<br>
+            a22407143
+        </p>
+    </footer>
+</body>
+</html>
