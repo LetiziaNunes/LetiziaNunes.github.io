@@ -1,0 +1,109 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #b0b0b0;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #7700ff;
+    color: white;
+    transform: scale(1.05);
+}
+
+h1, h2 {
+    color: #7700ff;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #7700ff;
+    padding-bottom: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+#fotografias h3, #video h3, #poema h3 {
+    color: #721ee0;
+    font-size: 24px;
+    border-bottom: 2px solid #721ee0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#poema {
+    background-color: #2c2c2c;
+    padding: 20px; 
+    margin: 20px 0; 
+    color: #e0e0e0; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#poema h3 {
+    text-align: center; 
+    color: #721ee0; 
+    font-size: 24px;
+    margin-bottom: 15px; 
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #7700ff;
+    padding: 20px 0; 
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); 
+    color: #ffffff; 
+}
+
+footer p {
+    margin: 0 0;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444; 
+}
+
+th {
+    background-color: #7700ff; 
+    color: white; 
+}

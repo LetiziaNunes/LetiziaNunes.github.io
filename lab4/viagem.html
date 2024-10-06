@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Viagem a Shibuya</title>
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+    <header></header>
+        <h1>Shibuya</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informações</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+        <img src="/lab3/images/shibuya.jpg" alt="Shibuya" width="600">
+    </header>
+
+<h1>Registro de Viagem a Shibuya</h1>
+<form method="get" action="https://postman-echo.com/get">
+    <fieldset>
+        <legend>Informações Pessoais</legend>
+        
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required><br><br>
+
+        <label for="apelido">Apelido:</label>
+        <input type="text" id="apelido" name="apelido" placeholder="Insira seu apelido"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Detalhes da Viagem</legend>
+        
+        <label for="dataPartida">Data de Partida:</label>
+        <input type="date" id="dataPartida" name="dataPartida" required><br><br>
+
+        <label for="dataRegresso">Data de Regresso:</label>
+        <input type="date" id="dataRegresso" name="dataRegresso"><br><br>
+
+        <label for="numPassageiros">Número de Passageiros:</label>
+        <input type="number" id="numPassageiros" name="numPassageiros" min="1" max="100" required><br><br>
+
+        <label for="transporte">Meio de Transporte Favorito:</label>
+        <select id="transporte" name="transporte">
+            <option value="carro">Carro</option>
+            <option value="comboio">Comboio</option>
+            <option value="aviao">Avião</option>
+            <option value="onibus">Autocarro</option>
+        </select><br><br>
+
+        <label>Serviço Desejado:</label>
+        <input type="radio" id="basico" name="servico" value="basico" required>
+        <label for="basico">Básico</label>
+        <input type="radio" id="premium" name="servico" value="premium">
+        <label for="premium">Premium</label><br><br>
+
+        <label for="pedidosEspeciais">Pedidos Especiais:</label>
+        <textarea id="pedidosEspeciais" name="pedidosEspeciais" rows="4" cols="50" placeholder="Digite aqui seus pedidos especiais..."></textarea><br><br>
+
+        <label for="valorPorPessoa">Qual o valor que espera gastar por pessoa e por dia na sua viagem:</label>
+        <input type="number" id="valorPorPessoa" name="valorPorPessoa" min="0" step="0.01" placeholder="€"><br><br>
+    </fieldset>
+
+    <input type="submit" value="Enviar">
+</form>
+<p><a href="/index.html">Voltar para o Website principal</a></p>
+<footer>
+    <p> Letizia Nunes</p>
+    <p> Universidade Lusófona Lisboa</p>
+    <p> a22407143</p>
+</footer>
+
+</body>
+</html>
