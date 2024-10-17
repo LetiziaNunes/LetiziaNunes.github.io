@@ -4,6 +4,7 @@
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Freckle+Face&family=Rubik+Puddles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
 
 html,
 body,
@@ -130,30 +131,71 @@ table {
   border-spacing: 0;
 }
 
-header {
-  font-family: "Freckle Face", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 6em;
-  display: flex;
-justify-content: center;
-}
-
 .cabeca {
   /* background-color: black;*/
   /* padding: .18em;*/
   /* width: fit-content;*/
-    
 }
 
-section{
-    height: 100vh;
-    color: #7700ff;
-    background-image: url("/images/My\ Neighbor\ Totoro.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-position: fixed;
-    
+header {
+  height: 100vh;
+  color: #7700ff;
+  background-image: url("/images/My\ Neighbor\ Totoro.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 7em;
+}
+
+nav {
+  font-family: "Dokdo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  background: rgba(103, 0, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: fit-content;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.pescoco {
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: -9px 10px 12px 0px rgba(250, 250, 250, 1);
+  -moz-box-shadow: -9px 10px 12px 0px rgba(250, 250, 250, 1);
+  box-shadow: -9px 10px 12px 0px rgba(250, 250, 250, 1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: "Dokdo", system-ui;
+  font-weight: 100;
+  width: 90em;
+  text-align: justify;
+  padding: 0.8em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  
+
+}
+
+.pescoco p{
+  font-size: 3em;
 }
