@@ -169,11 +169,11 @@ nav a {
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: "Dokdo", system-ui;
   font-weight: 100;
-  text-align: justify;
   padding: 7em;
-  height: 20em;
-  margin: 9.3em 18em 18em 18em;
+  height: 10em;
+  margin: 10em 18em 18em 18em;
   text-align: center;
+  height: fit-content; 
 }
 
 .pescoco p {
