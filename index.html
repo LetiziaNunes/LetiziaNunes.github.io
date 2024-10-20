@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desenvolvimento de Interfaces Web</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="cabeca">
-        <h1>Welcome to my first website</h1>
-      </div>
-      <div class="pescoco">
-        <p>
-          This is a simple website that I created to learn how to develop web
-          interfaces. I hope you enjoy it!
-        </p>
-      </div>
-      <audio autoplay>
-        <source src="/audio/10 Minutes of Rain and Thunderstorm Sounds For Focus, Relaxing and Sleep ⛈️ Epidemic ASMR.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      
-    </header>
-    <section></section>
-    <main></main>
-    <nav>
-      <ul>
-        <a href="/lab1/report.html">Lab 1</a>
-        <a href="/lab2/index.html">Lab 2</a>
-        <a href="/lab3/index.html">Lab 3</a>
-        <a href="/lab4/index.html">Lab 4</a>
-        <a href="/lab5/index.html">Lab 5</a>
-      </ul>
-    </nav>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desenvolvimento de Interfaces Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="cabeca">
+      <h1>Welcome to my first website</h1>
+    </div>
+    <div class="pescoco">
+      <p>
+        This is a simple website that I created to learn how to develop web
+        interfaces. I hope you enjoy it!
+      </p>
+    </div>
+    <img src="/images/bocci.gif" alt="Round Image" class="round-image" />
+    <audio id="background-audio" autoplay>
+      <source src="/audio/10 Minutes of Rain and Thunderstorm Sounds For Focus, Relaxing and Sleep ⛈️ Epidemic ASMR.mp3"
+        type="audio/mpeg">
+      Your browser does not support the audio element.
+      <script>
+        document.getElementById('background-audio').volume = 0.1;
+      </script>
+  </header>
+  <main>
+    <div class="ombros">
+      <h2>What you can find here:</h2>
+    </div>
+    <div class="peito">
+      <p>
+        Here you can find some of the labs that I have developed during the
+        course of Web Interface Development.
+      </p>
+    </div>
+    <div id="labs">
+      <nav>
+        <ul>
+          <li><a href="/lab1/report.html" class="lab-button">Lab 1</a></li>
+          <li><a href="/lab2/index.html" class="lab-button">Lab 2</a></li>
+          <li><a href="/lab3/index.html" class="lab-button">Lab 3</a></li>
+          <li><a href="/lab4/index.html" class="lab-button">Lab 4</a></li>
+          <li><a href="/lab5/index.html" class="lab-button">Lab 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+</body>
+
 </html>
