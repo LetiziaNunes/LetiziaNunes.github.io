@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <title>Cidade - Shibuya</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Shibuya</h1>
-        <nav class="main-nav">
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="local.html"><i class="fas fa-map-marker-alt"></i> Localização</a>
-            <a href="multimedia.html"><i class="fas fa-photo-video"></i> Multimédia</a>
-            <a href="info.html"><i class="fas fa-info-circle"></i> Informações</a>
-            <a href="quizz.html"><i class="fas fa-question-circle"></i> Quizz</a>
-            <a href="viagem.html"><i class="fas fa-plane"></i> Viagem</a>
-            <a href="pontosinteresse.html"><i class="fas fa-star"></i> Pontos de interesse</a>
-            <a href="capitais.html"><i class="fas fa-globe"></i> Capitais (do Japão)</a>
-        </nav>
     </header>
+    <nav class="main-nav">
+        <div class="dropdown">
+            <button class="dropdown-button"><i class="fas fa-bars"></i> Menu</button>
+            <div class="dropdown-content">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="local.html"><i class="fas fa-map-marker-alt"></i> Localização</a>
+                <a href="multimedia.html"><i class="fas fa-photo-video"></i> Multimédia</a>
+                <a href="info.html"><i class="fas fa-info-circle"></i> Informações</a>
+                <a href="quizz.html"><i class="fas fa-question-circle"></i> Quizz</a>
+                <a href="viagem.html"><i class="fas fa-plane"></i> Viagem</a>
+                <a href="pontosinteresse.html"><i class="fas fa-star"></i> Pontos de interesse</a>
+                <a href="capitais.html"><i class="fas fa-globe"></i> Capitais (do Japão)</a>
+                <a href="video.html"><i class="fas fa-video"></i> Vídeo</a> 
+            </div>
+        </div>
+    </nav>
     <main class="mainP">
         <h2>Home</h2>
         <p>Shibuya não é uma cidade mas sim um "bairro" de Tóquio, mas este fator não tira a sua beleza!</p>
         <p><a href="/index.html">Voltar para o Website principal</a></p>
     </main>
+
+    <aside>
+        <img src="/lab6/images/shibuya.jpg" alt="Imagem de Shibuya" style="width: 100%; border-radius: 10px;">
+    </aside>
     <footer>
         <p> Letizia Nunes</p>
         <p> Universidade Lusófona Lisboa</p>

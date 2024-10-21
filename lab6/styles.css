@@ -25,6 +25,21 @@ header {
     color: rgb(255, 255, 255);
 }
 
+@keyframes fadeInGrow {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+header h1 {
+    animation: fadeInGrow 1.5s ease-in-out;
+}
+
 .main-nav {
     position: sticky;
     top: 0;
@@ -201,8 +216,7 @@ input[type="date"],
 input[type="number"],
 select,
 textarea {
-    width: 100%; /* Ajustar a largura para 100% */
-    max-width: 500px; /* Definir uma largura máxima */
+    width: 40em;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #7700ff;
@@ -256,79 +270,29 @@ h1 {
 .capitalP p,
 .multiP p {
     font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
+    color: #d3d3d3;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+
+.parallax {
+    height: 90vh;
+    background-image: url("/images/nara.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
-    padding: 2em;
-}
-
-/* Media Queries para responsividade */
-@media (max-width: 1200px) {
-    header {
-        height: 30em;
-    }
-    
-    nav a {
-        padding: 1em;
-        font-size: medium;
-    }
-
-    .capital {
-        width: 45%; /* Aumentar a largura para dispositivos médios */
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        height: 20em; /* Diminuir a altura do cabeçalho em dispositivos menores */
-    }
-
-    h1 {
-        font-size: 2.5em; /* Reduzir o tamanho da fonte do título */
-    }
-
-    h2 {
-        font-size: 1.8em; /* Reduzir o tamanho da fonte do h2 */
-    }
-
-    h3 {
-        font-size: 1.2em; /* Reduzir o tamanho da fonte do h3 */
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="date"],
-    input[type="number"],
-    select,
-    textarea {
-        width: 90%; /* Tornar os inputs mais estreitos em dispositivos pequenos */
-    }
-
-    .capital {
-        width: 100%; /* Fazer os cards de capital ocuparem toda a largura */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em; /* Reduzir ainda mais o tamanho do título */
-    }
-
-    h2 {
-        font-size: 1.5em; /* Reduzir o tamanho da fonte do h2 */
-    }
-
-    h3 {
-        font-size: 1em; /* Reduzir o tamanho da fonte do h3 */
-    }
-
-    .mainP p,
-    .infoP p,
-    .localP p,
-    .quizzP p,
-    .pontosP p,
-    .viagemP p,
-    .capitalP p,
-    .multiP p {
-        font-size: 1.2em; /* Reduzir o tamanho do texto em dispositivos muito pequenos */
-    }
 }
