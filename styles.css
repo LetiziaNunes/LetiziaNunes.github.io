@@ -270,3 +270,15 @@ main {
   list-style-type: none; 
 }
 
+footer{
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
+  color: #3c405a;
+}
+
+
+
