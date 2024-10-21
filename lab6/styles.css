@@ -1,15 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Freckle+Face&family=Rubik+Puddles&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: #121212;
     color: #e0e0e0;
     font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 10px;
 }
 
 header {
     height: 40em;
-    color: #7700ff;
     background-image: url("/lab3/images/shibuya.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -18,37 +27,17 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(255, 255, 255);
 }
 
 .main-nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.sub-nav {
-    margin-top: 40px;
-}
-
-.sub-nav a {
-    padding: 10px;
-    color: #b0b0b0;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.sub-nav a:hover {
-    background-color: white;
-    color: black;
-}
-
-h1 {
-    color: #7700ff;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    background-color: #121212;
 }
 
 nav a {
@@ -56,7 +45,7 @@ nav a {
     font-size: large;
     text-decoration: none;
     color: #b0b0b0;
-    line-height: 3em;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 nav a:hover {
@@ -64,241 +53,61 @@ nav a:hover {
     color: white;
 }
 
-#poema {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60em;
-    background-image: url("/images/cerejeira.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #e0e0e0;
-}
-
-#poem {
-    padding: 20px;
-    border-radius: 10px;
-    font-size: large;
-}
-
-.poem-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.poem-content p {
-    font-size: 1.5em;
-    color: #e0e0e0;
-    font-weight: bold;
-    text-align: center;
-}
-
-.poem-content .author {
-    font-style: italic;
-    margin-top: 10px;
-    color: #ffffff;
-}
-
-#paisagem {
-    width: 100vw;
-    position: relative;
-}
-
-.photographer {
-    position: absolute;
-    bottom: 10px;
-    right: 50px;
-    color: white;
-}
-
-.photographer a {
-    color: white;
-    text-decoration: underline;
-}
-
-#cidades {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    background-color: #1e1e1e;
-    padding: 20px;
-}
-
-.capital {
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
-    background-color: #3b3b3b;
-    border-radius: 10px;
-    padding: 10px;
-    width: 120px;
-}
-
-.capital:hover {
-    background-color: #3e3e3e;
-}
-
-.capital img {
-    width: 130px;
-    height: fit-content;
-    border-radius: 10px;
-}
-
-.capital div {
     text-align: center;
-    color: #fafafa;
-    font-weight: bold;
-    width: 100%;
-    height: 100%;
-    padding-top: 5px;
-    
+    padding: 20px;
 }
 
-.ponto-interesse {
-    background-color: #161616;
-    border: 2px solid #7700ff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #7700ff;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.5em;
+    padding: 2em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 footer {
     font-family: "Freckle Face", system-ui;
-    font-weight: 400;
-    font-style: normal;
     text-align: center;
-    padding: 0.2em;
+    padding: 0.5em;
     font-size: 1.2em;
+    background-color: #796c9e;
     color: #ffffff;
-    background: #796c9e;
 }
 
-fieldset {
-    background-color: #141414;
-    border: 1px solid #7700ff;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+    }
 }
 
-legend {
-    color: #fff;
-    font-weight: bold;
-}
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="date"],
-input[type="number"],
-select,
-textarea {
-    width: 40em;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #7700ff;
-    border-radius: 5px;
-    background-color: #cecece;
-    color: #fff;
-}
-
-input[type="reset"],
-input[type="submit"] {
-    background-color: #7700ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-    background-color: #5a5aff;
-}
-
-h2{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 2em;
-    color: #7700ff;
-    text-align: center;
-}
-
-h3{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    color: #7700ff;
-    padding: 20px;
-}
-
-h1{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 3em;
-    color: #7700ff;
-    text-align: center;
-}
-
-.mainP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.infoP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.localP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.quizzP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.pontosP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.viagemP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.capitalP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.multiP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
+    nav a {
+        padding: 1em;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
 }
