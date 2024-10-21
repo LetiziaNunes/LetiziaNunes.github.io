@@ -155,7 +155,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     padding-top: 5px;
-    
 }
 
 .ponto-interesse {
@@ -202,7 +201,8 @@ input[type="date"],
 input[type="number"],
 select,
 textarea {
-    width: 40em;
+    width: 100%; /* Ajustar a largura para 100% */
+    max-width: 500px; /* Definir uma largura máxima */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #7700ff;
@@ -226,79 +226,109 @@ input[type="submit"]:hover {
     background-color: #5a5aff;
 }
 
-h2{
+h2 {
     font-family: 'Times New Roman', sans-serif;
     font-size: 2em;
     color: #7700ff;
     text-align: center;
 }
 
-h3{
+h3 {
     font-family: 'Times New Roman', sans-serif;
     font-size: 1.5em;
     color: #7700ff;
     padding: 20px;
 }
 
-h1{
+h1 {
     font-family: 'Times New Roman', sans-serif;
     font-size: 3em;
     color: #7700ff;
     text-align: center;
 }
 
-.mainP p{
+.mainP p,
+.infoP p,
+.localP p,
+.quizzP p,
+.pontosP p,
+.viagemP p,
+.capitalP p,
+.multiP p {
     font-family: 'Times New Roman', sans-serif;
     font-size: 1.5em;
     text-align: center;
     padding: 2em;
 }
 
-.infoP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+    header {
+        height: 30em;
+    }
+    
+    nav a {
+        padding: 1em;
+        font-size: medium;
+    }
+
+    .capital {
+        width: 45%; /* Aumentar a largura para dispositivos médios */
+    }
 }
 
-.localP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
+@media (max-width: 768px) {
+    header {
+        height: 20em; /* Diminuir a altura do cabeçalho em dispositivos menores */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Reduzir o tamanho da fonte do título */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Reduzir o tamanho da fonte do h2 */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Reduzir o tamanho da fonte do h3 */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 90%; /* Tornar os inputs mais estreitos em dispositivos pequenos */
+    }
+
+    .capital {
+        width: 100%; /* Fazer os cards de capital ocuparem toda a largura */
+    }
 }
 
-.quizzP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Reduzir ainda mais o tamanho do título */
+    }
 
-.pontosP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
+    h2 {
+        font-size: 1.5em; /* Reduzir o tamanho da fonte do h2 */
+    }
 
-.viagemP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
+    h3 {
+        font-size: 1em; /* Reduzir o tamanho da fonte do h3 */
+    }
 
-.capitalP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
-}
-
-.multiP p{
-    font-family: 'Times New Roman', sans-serif;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 2em;
+    .mainP p,
+    .infoP p,
+    .localP p,
+    .quizzP p,
+    .pontosP p,
+    .viagemP p,
+    .capitalP p,
+    .multiP p {
+        font-size: 1.2em; /* Reduzir o tamanho do texto em dispositivos muito pequenos */
+    }
 }
