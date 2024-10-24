@@ -1,0 +1,108 @@
+
+body {
+    background-color: #eeeeee;
+}
+
+
+footer{
+    background-color: #ebe8e8;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1{
+    background-color: #ebe8e8;
+    text-align:center;
+    padding: 1em 1em 1em 1em; 
+    border-radius: 10px;
+}
+
+header{
+    background-color: #fffcfc;
+    height: fit-content;
+    border-radius: 10px;
+    padding-bottom: 1.5em;
+}
+
+.cabeca p{
+    margin: auto;
+    text-align: justify;
+    padding-left: 1em;
+    font-size: large;
+    
+}
+
+.cabeca h2{
+    text-align: justify;
+    padding-left: 1em;
+}
+
+
+main{
+    background-color:#fffcfc; 
+    border-radius: 10px;
+}
+
+.introducao h3{
+    padding-top:1em ;
+    padding-left:0.8em;
+    font-size: x-large;
+}
+
+.introducao p{
+    display: list-item;
+    text-align: justify;
+    font-size: large;
+}
+
+main{
+    padding-bottom: 1em;
+}
+
+h4{
+    padding-top:1em ;
+    padding-left:0.8em;
+    font-size: x-large;
+}
+
+.grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 10px;
+    color: #ffffff;
+    
+}
+
+.grid-item {
+    display: inline-block;
+    background-color: rgba(197, 197, 197, 0.8);
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    padding: 0.8em;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.laboratorios{
+    background-color: #000000;
+    float: right;
+    width: 50%;
+}
+
+.introducao{
+    background-color: #fffcfc;
+    float: left;
+    width: 50%;
+    
+}
+
+.introducao p{
+display: flex;
+list-style-type: disc;
+margin-left: 20px;
+}
