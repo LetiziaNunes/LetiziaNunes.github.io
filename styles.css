@@ -154,6 +154,7 @@ header {
 header h1 {
   font-size: 7em;
   padding-top: 0.5em;
+  
 }
 
 nav a {
@@ -169,8 +170,7 @@ nav a {
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: "Dokdo", system-ui;
   font-weight: 100;
-  padding: 7em;
-  height: 10em;
+  padding: 6em;
   margin: 10em 18em 18em 18em;
   text-align: center;
   height: fit-content; 
@@ -192,6 +192,16 @@ nav a {
   position: absolute;  
   bottom: 10px;       
   right: 10px;         
+}
+
+.round-image2{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;  
+  bottom: 10px;       
+  right: 109em;         
 }
 
 main {
