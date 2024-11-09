@@ -1,30 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example</title>
+    <title>Eventos JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Welcome to My Page</h1>
-    <p>Lorem Lorem Lorem</p>
+    
+    <h1 id="hover-text">Passa por aqui!</h1>
+    
+    <div>
+        <p id="paint-text">2. Pinta-me!<span style="color: rgb(0, 0, 0);"> </span></p>
+        <button id="red-btn">Red</button>
+        <button id="green-btn">Green</button>
+        <button id="blue-btn">Blue</button>
+    </div>
+    
+    <div>
+        <p>3. Experimenta escrever...</p>
+        <input type="text" id="text-input" placeholder="Escreve algo">
+    </div>
+    
+    <div>
+        <p>4. Escolha uma cor em inglês:</p>
+        <input type="text" id="color-input" placeholder="Escreve a cor em inglês">
+        <button id="submit-color">submeter</button>
+    </div>
+    
+    <div>
+        <p>5. Conta!</p>
+        <button id="count-btn">Conta!</button>
+        <span id="count-result">0</span>
+    </div>
 
+    <div>
+        <button id="toggle-text">Mostrar/Esconder Texto</button>
+        <p id="toggle-text-element">CUCU!!!!👀.</p>
+    </div>
 
+    <nav>
+        <ul>
+            <li><a href="/index.html">Voltar para a landing page</a></li>
+        </ul>
+    </nav>
 
-    <!-- HTML já carregado! -->
-
-    <script src="scripts/main.js"></script>
-    <script>
-        let counter = 0;
-
-        function count() {
-            const heading = document.querySelector('h1');
-            counter++;
-            heading.textContent = counter;
-        } 
-    </script>
+    <script src="main.js"></script>
 </body>
-
 </html>
