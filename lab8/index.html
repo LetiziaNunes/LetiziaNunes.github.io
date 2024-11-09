@@ -12,9 +12,9 @@
     
     <div>
         <p id="paint-text">2. Pinta-me!<span style="color: rgb(0, 0, 0);"> </span></p>
-        <button id="red-btn">Red</button>
-        <button id="green-btn">Green</button>
-        <button id="blue-btn">Blue</button>
+        <button data-color="red">Red</button>
+        <button data-color="green">Green</button>
+        <button data-color="blue">Blue</button>
     </div>
     
     <div>
@@ -23,9 +23,12 @@
     </div>
     
     <div>
-        <p>4. Escolha uma cor em inglês:</p>
-        <input type="text" id="color-input" placeholder="Escreve a cor em inglês">
-        <button id="submit-color">submeter</button>
+        <p>4. Escolha uma cor:<select id="color-select">
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+        </select></p>
+        
     </div>
     
     <div>
@@ -37,6 +40,20 @@
     <div>
         <button id="toggle-text">Mostrar/Esconder Texto</button>
         <p id="toggle-text-element">CUCU!!!!👀.</p>
+    </div>
+
+    <div>
+        <p>6. Informe seu nome e idade:</p>
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="name-input" placeholder="Nome">
+            <input type="number" id="age-input" placeholder="Idade">
+        </div>
+        <button id="generate-message">Gerar Mensagem</button>
+        <p id="generated-message"></p>
+    </div>
+
+    <div>
+        <p>7. Contador Automático: <span id="auto-counter">0</span></p>
     </div>
 
     <nav>
