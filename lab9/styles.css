@@ -245,7 +245,6 @@ footer {
   margin-top: 2em;
 }
 
-
 #custoTotal {
   font-size: 1.5em;
   font-weight: bold;
@@ -253,6 +252,15 @@ footer {
   text-align: center;
   color: white;
   margin-bottom: 1.5em;
+}
+
+#cesto h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 2em;
+  margin-top: -3em;
 }
 
 #cesto {
