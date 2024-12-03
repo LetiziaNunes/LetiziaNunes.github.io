@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loja</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Loja</h1>
+            <nav>
+                <ul>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#cesto">Cesto</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="produtos">
+                <h2>Selecione os seus pedidos</h2>
+                <article id="allProducts" class="produto-container">
+                    <!-- Produtos serão gerados dinamicamente aqui -->
+                </article>
+            </section>
+
+            <section id="cesto">
+                <article>
+                    <h2>Produtos Selecionados</h2>
+                    <aside id="selecionados" class="selecionados-container">
+                        <!-- Produtos selecionados serão exibidos aqui -->
+                    </aside>
+                    <p id="custoTotal"></p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>2024</p>
+            <p><a href="/index.html">Voltar para o Website principal</a></p>
+        </footer>
+
+        <script type="module" src="main.js"></script>
+        <script type="module" src="produto.js"></script>
+    </body>
+</html>
