@@ -147,7 +147,11 @@ header {
   width: 100%;
   height: 8em;
   background-color: #ffd5dc;
+<<<<<<< HEAD
   color: white;
+=======
+  color: #b17777;
+>>>>>>> 4831268 (lab 10 quase completo)
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -155,12 +159,19 @@ header {
   padding-bottom: 0em;
 }
 
+<<<<<<< HEAD
 header ul {
   justify-content: right;
 }
 
 header h1 {
   font-size: 2em;
+=======
+header h1{
+  font-family: 'Freckle Face', cursive;
+  font-size: 3.5em;
+  margin-left: 45%;
+>>>>>>> 4831268 (lab 10 quase completo)
 }
 
 body h2 {
@@ -183,9 +194,16 @@ nav ul {
 nav ul li a {
   padding-right: 1em;
   text-align: center;
+<<<<<<< HEAD
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
+=======
+  color: #b17777;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+>>>>>>> 4831268 (lab 10 quase completo)
 }
 
 main {
@@ -195,7 +213,11 @@ main {
 #allProducts, #selecionados {
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
   gap: 20px;
+=======
+  gap: 35px;
+>>>>>>> 4831268 (lab 10 quase completo)
 }
 
 .produto {
@@ -226,7 +248,11 @@ main {
   display: block;
   margin-top: 10px;
   font-weight: bold;
+<<<<<<< HEAD
   color: #ffd5dc; 
+=======
+  color: #b17777; 
+>>>>>>> 4831268 (lab 10 quase completo)
   font-size: 1.2em; 
 }
 .produto h3 {
@@ -268,10 +294,24 @@ button:hover {
 footer {
   text-align: center;
   background-color: #ffd5dc;
+<<<<<<< HEAD
   color: white;
   padding: 2.6em;
   margin-top: 2em;
   list-style: none;
+=======
+  color: #b17777;
+  padding: 2.6em;
+  margin-top: 2em;
+  list-style: none;
+  font-size: 1.5em;
+}
+
+footer p {
+  padding-bottom: 1em;
+  text-decoration: none;
+  
+>>>>>>> 4831268 (lab 10 quase completo)
 }
 
 #custoTotal {
@@ -300,4 +340,37 @@ footer {
   margin-top: 1em;
   margin-left: -2em;
   margin-right: -2em;
+<<<<<<< HEAD
+=======
+}
+
+
+#pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  margin-left: -2em;
+  margin-right: -2em;
+  gap: 1em;
+  background-color: #ffe4e9;
+  padding: 2em 0em 2em 0em;
+  color: #b17777;
+  border-radius: 50%;
+}
+
+#checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+  margin-left: -2em;
+  margin-right: -2em;
+  gap: 1em;
+  background-color: #ffe4e9;
+  padding: 2em 2em 2em 2em;
+  color: #b17777;
+  border-radius: 90%;
+  margin-bottom: 3em;
+>>>>>>> 4831268 (lab 10 quase completo)
 }

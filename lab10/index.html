@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,4 +46,94 @@
         <script type="module" src="main.js"></script>
         <script type="module" src="produto.js"></script>
     </body>
+=======
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Loja DEISI</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cesto">Cesto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <h2>Selecione os seus pedidos</h2>
+            <section id="pesquisa">
+                <section>
+                    <label for="categorias">Categoria</label>
+                    <select name="categorias" id="categorias">
+                    </select>
+                </section>
+
+                <section>
+                    <label for="ordenacao">Ordenar por</label>
+                    <select name="ordenacao" id="ordenacao">
+                        <option value="" >Selecione a ordenação</option>
+                        <option value="decrescente">Preço decrescente</option>
+                        <option value="crescente">Preço crescente</option>
+                    </select>
+                </section>
+
+                <section>
+                    <label for="busca" id="labelBusca">Buscar produto</label>
+                    <input type="text" id="buscaProduto" placeholder="Pesquise por produto">
+                </section>
+
+            </section>
+
+            <article id="allProducts" class="produto-container">
+                <!-- Produtos serão gerados dinamicamente aqui -->
+            </article>
+        </section>
+
+        <section id="cesto">
+            <article>
+                <h2>Produtos Selecionados</h2>
+                <aside id="selecionados" class="selecionados-container">
+                    <!-- Produtos selecionados serão exibidos aqui -->
+                </aside>
+                <p id="custoTotal"></p>
+                <section id="checkout">
+                    <p id="total"></p>
+        
+                    <section>
+                        <label for="estudante">És estudante do DEISI?</label>
+                        <input type="checkbox" id="estudante">
+                    </section>
+        
+                    <section>
+                        <label for="desconto">Cupão de desconto:</label>
+                        <input type="" value="" id="desconto">
+                    </section>
+                    
+                    <button type="button" id="comprar">Comprar</button>
+        
+                </section>
+            </article>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>2024</p>
+        <p><a href="/index.html">Voltar para o Website principal</a></p>
+    </footer>
+
+
+</body>
+
+>>>>>>> 4831268 (lab 10 quase completo)
 </html>
