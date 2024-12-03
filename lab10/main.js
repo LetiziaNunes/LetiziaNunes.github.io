@@ -118,6 +118,45 @@ function criaProdutoCesto(produto) {
     return elementoProduto;
 }
 
+// Filtra os produtos baseando-se no termo de busca inserido
+// Filtra os produtos baseando-se no termo de busca inserido (apenas pelo título)
+function buscarProdutos(termo) {
+    const sectionProdutos = document.querySelector("#allProducts");
+    sectionProdutos.innerHTML = ""; // Limpa os produtos exibidos
+
+    const termoNormalizado = termo.trim().toLowerCase();
+
+    // Filtra os produtos com base no termo apenas no título
+    const produtosFiltrados = listaProdutos.filter(produto =>
+        produto.title.toLowerCase().includes(termoNormalizado)
+    );
+
+    // Atualiza a secção com os produtos filtrados
+    if (produtosFiltrados.length > 0) {
+        produtosFiltrados.forEach(produto => {
+            const elementoProduto = criaProduto(produto, function () {
+                if (!idsSelectionados.has(produto.id)) {
+                    idsSelectionados.add(produto.id);
+                    carregarProdutosSelecionados();
+                    localStorage.setItem("produtos-selecionados", JSON.stringify(produtosSelecionados));
+                }
+            });
+            sectionProdutos.appendChild(elementoProduto);
+        });
+    } else {
+        const mensagem = document.createElement("p");
+        mensagem.textContent = "Nenhum produto encontrado.";
+        sectionProdutos.appendChild(mensagem);
+    }
+}
+
+// Evento para escutar a digitação no campo de busca
+document.querySelector("#buscaProduto").addEventListener("input", (evento) => {
+    buscarProdutos(evento.target.value);
+});
+
+
+
 // Cria o menu de filtros para categorias.
 async function menuFiltrar() {
     const categorias = await fetchCategorias();
@@ -221,8 +260,7 @@ async function pedidoCompra(dados) {
     
 }
 
-document.querySelector('#comprar').addEventListener('click', async ()=> {
-
+document.querySelector('#comprar').addEventListener('click', async () => {
     const products = JSON.parse(localStorage.getItem('produtos-selecionados')).map(produto => `${produto.id}`);
     const checkbox = document.querySelector('#estudante').checked;
     const desconto = document.querySelector('#desconto').value;
@@ -233,28 +271,40 @@ document.querySelector('#comprar').addEventListener('click', async ()=> {
         "student": checkbox,
         "coupon": desconto
     }
-      
+    
     resposta = await pedidoCompra(data);
 
-    const preco = document.createElement('p');
-    preco.textContent = `Custo total: ${resposta.totalCost} €`;
-    preco.style.fontSize = '24px';
-    preco.style.fontWeight = 'bold';
-
-    const referencia = document.createElement('p');
-    referencia.textContent = `Referência de pagamento: ${resposta.reference}`;
-    referencia.style.fontSize = '20px';
-    referencia.style.fontWeight = 'bold';
-    referencia.style.marginBottom = '20px';
-
+    // Selecionar o elemento de checkout existente
     const pagamento = document.querySelector('#checkout');
-    
-    pagamento.querySelectorAll('*').forEach(element => element.setAttribute('hidden', ''));
-    
-    pagamento.appendChild(preco);
-    pagamento.appendChild(referencia);
 
+    // Verificar se os elementos de preço e referência já existem
+    let preco = pagamento.querySelector('.preco');
+    let referencia = pagamento.querySelector('.referencia');
+
+    // Se não existirem, criar os elementos
+    if (!preco) {
+        preco = document.createElement('p');
+        preco.classList.add('preco');
+        preco.style.fontSize = '24px';
+        preco.style.fontWeight = 'bold';
+        pagamento.appendChild(preco);
+    }
+
+    if (!referencia) {
+        referencia = document.createElement('p');
+        referencia.classList.add('referencia');
+        referencia.style.fontSize = '20px';
+        referencia.style.fontWeight = 'bold';
+        referencia.style.marginBottom = '20px';
+        pagamento.appendChild(referencia);
+    }
+
+    // Atualizar o conteúdo dos elementos
+    preco.textContent = `Custo total: ${resposta.totalCost} €`;
+    referencia.textContent = `Referência de pagamento: ${resposta.reference}`;
 });
+
+
 
 
 document.querySelector("#ordenacao").addEventListener("change", ordenarPorPreco);

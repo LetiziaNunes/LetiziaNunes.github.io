@@ -299,7 +299,12 @@ footer p {
 }
 
 #cesto {
-  background-color: #ffd5dc;
+  background-image: url("/images/sapinho.gif");
+  background-color: #ffe4e9;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,15 +330,18 @@ footer p {
 
 #checkout {
   display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
   justify-content: center;
   align-items: center;
   margin-top: 4em;
   margin-left: -2em;
   margin-right: -2em;
   gap: 1em;
-  background-color: #ffe4e9;
-  padding: 2em 2em 2em 2em;
+  background-color: #ffffff;
+  padding: 4em 4em 4em 4em;
   color: #b17777;
   border-radius: 90%;
   margin-bottom: 3em;
+  
 }
+
