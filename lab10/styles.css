@@ -195,6 +195,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
+  justify-content: center; /* Centraliza os produtos horizontalmente */
 }
 
 .produto {
@@ -207,7 +208,10 @@ main {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
   transition: transform 0.3s, box-shadow 0.3s; /* Transição suave */
+  margin-left: auto; /* Centraliza à esquerda */
+  margin-right: auto; /* Centraliza à direita */
 }
+
 
 .produto:hover {
   transform: translateY(-5px); /* Elevação ao passar o mouse */
@@ -342,6 +346,5 @@ footer p {
   color: #b17777;
   border-radius: 90%;
   margin-bottom: 3em;
-  
 }
 
