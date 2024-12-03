@@ -195,7 +195,7 @@ main {
 #allProducts, #selecionados {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 35px;
 }
 
 .produto {
