@@ -69,6 +69,11 @@ function criaProduto(produto, callback) {
     descricao.classList.add('produto__description');
     descricao.textContent = produto.description;
 
+    const rate = document.createElement('span');
+    rate.classList.add('produto__rate');
+    rate.textContent = produto.rate;
+
+
     const botao = document.createElement('button');
     botao.textContent = '+ Adicionar ao cesto';
     botao.addEventListener("click", callback);
@@ -77,6 +82,7 @@ function criaProduto(produto, callback) {
     article.appendChild(imagem);
     article.appendChild(preco);
     article.appendChild(descricao);
+    article.appendChild(rate);
     article.appendChild(botao);
 
     return article;
@@ -128,7 +134,8 @@ function buscarProdutos(termo) {
 
     // Filtra os produtos com base no termo apenas no título
     const produtosFiltrados = listaProdutos.filter(produto =>
-        produto.title.toLowerCase().includes(termoNormalizado)
+        produto.title.toLowerCase().includes(termoNormalizado) || produto.description.toLowerCase().includes(termoNormalizado)
+
     );
 
     // Atualiza a secção com os produtos filtrados
@@ -310,7 +317,7 @@ document.querySelector('#comprar').addEventListener('click', async () => {
 document.querySelector("#ordenacao").addEventListener("change", ordenarPorPreco);
 
 
-
+// Evento principal ao carregar o DOM.
 document.addEventListener("DOMContentLoaded", async () => {
     inicializarLocalStorage();
     const produtos = await fetchProdutos();
@@ -320,4 +327,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Inicializa o menu de filtros.
     await menuFiltrar();
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const selecionadosContainer = document.getElementById("selecionados");
+    const custoTotal = document.getElementById("custoTotal");
+
+    // Evento para remover todos os produtos
+    document.getElementById("removerTudo").addEventListener("click", () => {
+        // Esvaziar o conteúdo do contêiner de produtos selecionados
+        selecionadosContainer.innerHTML = "";
+
+        // Atualizar o custo total para zero
+        custoTotal.textContent = "Custo total: 0€";
+    });
+});
+
+
 
